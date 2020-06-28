@@ -1,0 +1,13 @@
+{% extends "quiz_base.html" %}
+{% block quiz %}
+<div class="result_message">
+    <p class="{% if right %}right{% else %}wrong{% endif %}">You're {% if right %} right! {% else %} wrong! {% endif
+        %} </p>
+    {% if not right %} <p class="correction">Right answer is {{answer}}</p> {% endif %}
+    <form action='/next_flag_question' method='POST'>
+        <div class="newt_button">
+            <input class="orange_button" type='submit' value='Next!' name='next'>
+        </div>
+    </form>
+</div>
+{% endblock %}

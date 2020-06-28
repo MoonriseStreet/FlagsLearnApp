@@ -1,0 +1,14 @@
+{% extends "quiz_base.html" %}
+{% block quiz %}
+<div class={% if right %}"result_message"{% else %}"flag_result_message"{% endif %}>
+    <p class="{% if right %}right{% else %}wrong{% endif %}">You're {% if right %} right! {% else %} wrong! {% endif %} </p>
+    {% if not right %} <p class="correction">Right answer is </p>
+    <img class="flag_answer" src="{{answer}}" alt="something went wrong... check your internet connection">
+    {% endif %}
+    <form action='/next_country_question' method='POST'>
+        <div class="newt_button">
+            <input class="orange_button" type='submit' value='Next!' name='next'>
+        </div>
+    </form>
+</div>
+{% endblock %}

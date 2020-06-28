@@ -1,0 +1,24 @@
+{% extends "quiz_base.html" %}
+{% block quiz %}
+<form action='/country_quiz' method='POST'>
+    <p class="question_title">What flag does {{country}} have?</p>
+    <ol class="answer_block">
+        <div class="answer_row">
+            <div class="answer">
+                <input class="flag_button" type='submit' value="{{ (flags[0]) }}" name='country' style="background-image: url({{ (flags[0]) }});"/>
+            </div>
+            <div class="answer">
+                <input class="flag_button" type='submit' value="{{ (flags[1]) }}" name='country' style="background-image: url({{ (flags[1]) }});"/>
+            </div>
+        </div>
+        <div class="answer_row">
+            <div class="answer">
+                <input class="flag_button" type='submit' value="{{ (flags[2]) }}" name='country' style="background-image: url({{ (flags[2]) }});"/>
+            </div>
+            <div class="answer">
+                <input class="flag_button" type='submit' value="{{ (flags[3]) }}" name='country' style="background-image: url({{ (flags[3]) }});"/>
+            </div>
+        </div>
+    </ol>
+</form>
+{% endblock %}

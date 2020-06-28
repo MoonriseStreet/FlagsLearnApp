@@ -1,4 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<h><a href="{{url}}">Quiz!</a></h>
+<div class="box">
+    <div class="central_message">
+        <div class="big_button">
+            <a class="orange_button" href="/flag_quiz">Flag quiz</a>
+        </div>
+        <div class="big_button">
+            <a class="orange_button" href="/country_quiz">Country quiz</a>
+        </div>
+        <div class="big_button">
+            <a class="orange_button" href="/list">List of countries</a>
+        </div>
+        <div class="big_button">
+            <a class="orange_button" href="/random_country">Random country</a>
+        </div>
+    </div>
+</div>
 {% endblock %}

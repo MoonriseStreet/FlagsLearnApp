@@ -1,7 +1,6 @@
 import sqlite3 as sql
 import urllib.error
-import requests
-from urllib.request import urlopen, Request, urlretrieve
+from urllib.request import urlopen, Request
 import re
 
 con = sql.connect('test.db')
@@ -15,11 +14,16 @@ data = []
 if __name__ == '__main__':
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'}
-    list_of_countries = urllib.request.urlopen('https://en.wikipedia.org/wiki/List_of_sovereign_states').read()
-    req = Request(url='https://www.countries-ofthe-world.com/capitals-of-the-world.html', headers=headers)
+    list_of_countries = urllib.request.urlopen(
+        'https://en.wikipedia.org/wiki/List_of_sovereign_states').read()
+    req = Request(
+        url='https://www.countries-ofthe-world.com/capitals-of-the-world.html',
+        headers=headers)
     list_of_capitals = urllib.request.urlopen(req).read()
     countries_list = re.findall(r'<span id="\w+">', str(list_of_countries))
-    capitals_list = re.findall(r'<td>[a-zA-Z,.\'()\-\s]+</td><td>[a-zA-Zó\',.()\-\s]+</td>', str(list_of_capitals))
+    capitals_list = re.findall(
+        r'<td>[a-zA-Z,.\'()\-\s]+</td><td>[a-zA-Zó\',.()\-\s]+</td>',
+        str(list_of_capitals))
     f = open('data.txt', 'w')
     if countries_list:
         counter = -1
@@ -29,13 +33,14 @@ if __name__ == '__main__':
             country = re.search('\"\w+\"', country)
             country = country.group()[1:-1:]
             try:
-                country_page = urllib.request.urlopen('https://en.wikipedia.org/wiki/' + country)
+                country_page = urllib.request.urlopen(
+                    'https://en.wikipedia.org/wiki/' + country)
             except urllib.error.HTTPError:
                 print(country + " not found")
                 continue
             try:
                 flag_url = re.search(
-                    r'//upload.wikimedia.org/wikipedia(/commons)??(/en)??/thumb/[a-z0-9]/[a-z0-9][a-z0-9]/Flag_of_(the_)??(The_)??'+country+'[.]*.svg',
+                    r'//upload.wikimedia.org/wikipedia(/commons)??(/en)??/thumb/[a-z0-9]/[a-z0-9][a-z0-9]/Flag_of_(the_)??(The_)??' + country + '[.]*.svg',
                     str(list_of_countries))
                 flag = 'None'
                 if flag_url:
