@@ -1,6 +1,6 @@
 # "Fun with flags" quiz 
 
-Python project, made by [Dmitry Mokeev](https://github.com/mokeevdmitrii) and [Lialikova Irina](https://github.com/lialikova-ia).
+Python web app, made as my study project. Hoped to be redesigned once.
 
 ## Installation
 
