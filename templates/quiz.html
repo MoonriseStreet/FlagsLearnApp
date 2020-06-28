@@ -1,0 +1,13 @@
+{% extends "quiz_base.html" %}
+{% block quiz %}
+<h1>7 Wonders of the World</h1>
+<form action='/quiz' method='POST'>
+        What country does this flag belong to?
+        <img src={{flag}} alt="альтернативный текст">
+         <ol>
+        {% for i in range(4) %}
+             <input type='submit' value="{{(names[i])}}" name='country'>
+        {% endfor %}
+    </ol>
+</form>
+{% endblock %}
