@@ -20,7 +20,7 @@ First of all it is much better than previous version:
 	* works fine for me, on my difficult level I'm absolutely dumb
 And in general it is quite working, I can replace flags and countries with paintings and artists one day, or add capitals(there already capitals in my database).
 
-##Disadvantages
+## Disadvantages
 =============
 Well,
 	- design is awful, sometimes flas are squeezed, and I hate colors
