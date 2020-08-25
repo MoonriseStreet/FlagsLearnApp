@@ -15,13 +15,10 @@ Well, to make this work look through `collect.py`, to create database from the d
 
 First of all it is much better than previous version:
 
-	 * you can not see Flag_og_Argentina.svg in HTML anymore, no hints
-
-	 * no bugs on refreshing page, end of session and forgetting progress when leaving quiz
-
-	 * refreshing random country page does not change country..
-
-	 * works fine for me, on my difficult level I'm absolutely dumb
+	 1. you can not see Flag_og_Argentina.svg in HTML anymore, no hints
+	 2. no bugs on refreshing page, end of session and forgetting progress when leaving quiz
+	 3. refreshing random country page does not change country..
+	 4. works fine for me, on my difficult level I'm absolutely dumb
 
 And in general it is quite working, I can replace flags and countries with paintings and artists one day, or add capitals(there already capitals in my database).
 
