@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="quiz_block">
-    <div class="progress_bar">hoho</div>
-    <p class="level_note">level: {% if session.get('level') == 0 %}easy{% elif session.get('level') == 1 %}medium{% else %}hard{% endif %}</p>
-    {% block quiz %}{% endblock %}
-</div>
-{% endblock %}

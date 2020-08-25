@@ -1,8 +1,0 @@
-{% extends "quiz_base.html" %}
-{% block quiz %}
-<h2>You're {% if right %} right! {% else %} wrong! {% endif %} </h2>
-{% if not right %} <h4>Right answer is {{answer}}</h4> {% endif %}
-<form action='/nextquestion' method='POST'>
-    <input type='submit' value='Next!' name='next'>
-</form>
-{% endblock %}
