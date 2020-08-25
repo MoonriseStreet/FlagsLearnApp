@@ -14,16 +14,16 @@ Well, to make this work look through `collect.py`, to create database from the d
 ##Advantages
 
 First of all it is much better than previous version:
-	* you can not see Flag_og_Argentina.svg in HTML anymore, no hints
-	* no bugs on refreshing page, end of session and forgetting progress when leaving quiz
-	* refreshing random country page does not change country..
-	* works fine for me, on my difficult level I'm absolutely dumb
+	 * you can not see Flag_og_Argentina.svg in HTML anymore, no hints
+	 * no bugs on refreshing page, end of session and forgetting progress when leaving quiz
+	 * refreshing random country page does not change country..
+	 * works fine for me, on my difficult level I'm absolutely dumb
 And in general it is quite working, I can replace flags and countries with paintings and artists one day, or add capitals(there already capitals in my database).
 
 ## Disadvantages
 =============
 Well,
-	- design is awful, sometimes flas are squeezed, and I hate colors
-	- I think there's better way to organise code
-	- no mobile version
+	 - design is awful, sometimes flas are squeezed, and I hate colors
+	 - I think there's better way to organise code
+	 - no mobile version
 
