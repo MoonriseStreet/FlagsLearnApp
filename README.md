@@ -1,6 +1,6 @@
 # Fun with Flags App 
 ### (Updated and 'translated' from Python into PHP)
-==========================
+
 Web app, at first made as study Python project with so many stupid bugs and now rebuild on PHP.
 If I ever have my own web server, I'll place a link here.
 
@@ -8,11 +8,11 @@ Still hoped to be redesigned one day...
 
 
 ## Installation
-========================
+
 Well, to make this work look through `collect.py`, to create database from the data about countries from `data.txt`. Then to make different complexity levels avialable complete database with estimating complexity of countries using `complexity.py`.
 
 ##Advantages
-===========
+
 First of all it is much better than previous version:
 	* you can not see Flag_og_Argentina.svg in HTML anymore, no hints
 	* no bugs on refreshing page, end of session and forgetting progress when leaving quiz
